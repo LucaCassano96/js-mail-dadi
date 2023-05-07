@@ -1,29 +1,37 @@
 
 
+const mail = ["luca@gmail.com", "marco@gmail.com", "mario@gmail.com","davide@gmail.com", "alessio@gmail.com"];
 
-const mail = ["luca@gmail.com", "marco@gmail.com", "mario@gmail.com"];
 
 const addMail = (prompt("inserisci la tua mail"));
-
-console.log(addMail);
 
 for (let i = 0; i < mail.length; i++){
 
 const element = mail [i];
 
-/* console.log(element); */
+esito = false;
 
 if(addMail === element){
 
-    let benvenuto = ("passi");
-    console.log(benvenuto);
-
+    esito = true;
+    /* console.log(`${esito} Puoi entrare`); */
 }
 
-else{
+else {
 
-    benvenuto = ("non-passi");
-    console.log(benvenuto);
+    esito = false;
+    /* console.log(`${esito} Non puoi entrare`); */
 }
-    
+
+
+if (esito === true) {
+    messaggioOutput = "puoi entrare";
+    console.log(messaggioOutput);
+}
+
+else if (esito === false){
+    messaggioOutput = "Non puoi entrare";
+    console.log(messaggioOutput);
+}
+
 }
